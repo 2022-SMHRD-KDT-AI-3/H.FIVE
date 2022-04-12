@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+
+<style>
+    .hero.hero-inner {
+        background-image: url(images/Glamping.png);
+        background-size: 100%;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Untree.co">
+    <link rel="shortcut icon" href="favicon.png">
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400&family=Gowun+Dodum&family=Nanum+Gothic+Coding&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/diary.css">
+    
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <style type="text/css">
+        .tip {
+            position: relative;
+            width: 800px;
+            height: 600px;
+        }
+
+        .Vf {
+            position: relative;
+            padding-top: 56%;
+            width: 100%;
+            height: 0;
+        }
+
+        /* iframe */
+        .Vf>iframe {
+            position: absolute;
+            top: 10%;
+            left: 30%;
+            width: 80%;
+            height: 80%;
+        }
+
+        .swiper-container {
+            left: 150px;
+            width: 100%;
+            height: 200px;
+            border: 5px solid silver;
+            border-radius: 7px;
+            box-shadow: 0 0 20px #ccc inset;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            display: flex;
+            /* 내용을 중앙정렬 하기위해 flex 사용 */
+            align-items: center;
+            /* 위아래 기준 중앙정렬 */
+            justify-content: center;
+            /* 좌우 기준 중앙정렬 */
+        }
+
+        .swiper-slide img {
+            box-shadow: 0 0 5px #555;
+            max-width: 100%;
+            /* 이미지 최대너비를 제한, 슬라이드에 이미지가 여러개가 보여질때 필요 */
+            /* 이 예제에서 필요해서 설정했습니다. 상황에따라 다를 수 있습니다. */
+        }
+    </style>
+
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close">
+                <span class="icofont-close js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <nav class="site-nav">
+        <div class="container">
+            <div class="site-navigation">
+                <a href="main" class="logo m-0">CAMP'US'</a>
+
+                <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
+                    <li class="active"><a href="main">Home</a></li>
+                    <li><a href="search">Search</a></li>
+                    <li><a href="D_main">Diary</a></li>
+                    <li class="has-children">
+                        <a href="#">HoneyTip</a>
+                        <ul class="dropdown">
+                            <li><a href="campingtip_a">캠핑음식</a></li>
+                            <li><a href="#">캠핑장비</a></li>
+                            <li><a href="#">텐트설치</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="community">Community</a></li>
+                    <% if(user==null){%>
+                        <li><a href="Login_page">Login</a></li>
+                      <%}else{%>
+                        <li><a href="logout">Logout</a></li>
+                        <li><a href="mypage">mypage</a></li>
+                      <%} %>
+                </ul>
+
+                <a href="#"
+                    class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
+                    data-toggle="collapse" data-target="#main-navbar">
+                    <span></span>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="hero hero-inner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mx-auto text-center">
+                    <div class="intro-wrap">
+                        <h1 class="mb-0">HoneyTip</h1>
+                        <p class="text-white">True camping is not about going to see a new landscape, but getting another eye to see the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="untree_co-section">
+        <div class="row mb-5 justify-content-center">
+          <h1 class="section-title text-center mb-3">Camping Food</h1>
+        </div>
+      </div>
+
+
+    <div class="untree_co-section1">
+        <div class="container">
+            <div class="container2">
+                <div class="row">
+
+                    <div class="tip">
+                        <div class="Vf">
+                            <iframe class="iframe" width="1000" height="750" src="https://www.youtube.com/embed/Je0XoCqEEfM"
+                                title="YouTube video player" frameborder="3"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <!-- 클래스명은 변경하면 안 됨 -->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/15r6xqmKi8g" target="blank">
+                                        <img src="http://img.youtube.com/vi/15r6xqmKi8g/mqdefault.jpg" alt="음식">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/Je0XoCqEEfM">
+                                        <img src="http://img.youtube.com/vi/Je0XoCqEEfM/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/NRSvAEiq-WM">
+                                        <img src="http://img.youtube.com/vi/NRSvAEiq-WM/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/bzODJm-YivA">
+                                        <img src="http://img.youtube.com/vi/bzODJm-YivA/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/_UIWcpDJcmM">
+                                        <img src="http://img.youtube.com/vi/_UIWcpDJcmM/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/TvQBJe7RtwM">
+                                        <img src="http://img.youtube.com/vi/TvQBJe7RtwM/mqdefault.jpg">
+                                    </a>
+                                </div>
+            
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/htFabY73UNc">
+                                        <img src="http://img.youtube.com/vi/htFabY73UNc/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/g7kYwjTEvWc">
+                                        <img src="http://img.youtube.com/vi/g7kYwjTEvWc/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/K4MAh998gAU">
+                                        <img src="http://img.youtube.com/vi/K4MAh998gAU/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/9jgFiE5zIq8">
+                                        <img src="http://img.youtube.com/vi/9jgFiE5zIq8/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/qj9OY9oN0ow">
+                                        <img src="http://img.youtube.com/vi/qj9OY9oN0ow/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/3YZ6ivM2LKg">
+                                        <img src="http://img.youtube.com/vi/3YZ6ivM2LKg/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/YuEYxGZBZUA">
+                                        <img src="http://img.youtube.com/vi/YuEYxGZBZUA/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/zivqyCcJYsI">
+                                        <img src="http://img.youtube.com/vi/zivqyCcJYsI/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/-du6r9Qwwzg">
+                                        <img src="http://img.youtube.com/vi/-du6r9Qwwzg/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/zyHLOYhfsGc">
+                                        <img src="http://img.youtube.com/vi/zyHLOYhfsGc/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/YYbJbGoUTb8">
+                                        <img src="http://img.youtube.com/vi/YYbJbGoUTb8/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/bwiUIBcen3k">
+                                        <img src="http://img.youtube.com/vi/bwiUIBcen3k/mqdefault.jpg">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-url="https://www.youtube.com/embed/WXkFiH0pwwM">
+                                        <img src="http://img.youtube.com/vi/WXkFiH0pwwM/mqdefault.jpg">
+                                    </a>
+                                </div>
+                
+                            </div>
+
+                            <!-- 네비게이션 -->
+                            <div class="swiper-button-next"></div><!-- 다음 버튼 (오른쪽에 있는 버튼) -->
+                            <div class="swiper-button-prev"></div><!-- 이전 버튼 -->
+
+                            <!-- 페이징 -->
+                            <div class="swiper-pagination"></div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br>
+
+    <div class="py-5 cta-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 class="mb-2 text-white">Lets you Explore the Best. Contact Us Now</h2>
+                    <p class="mb-4 lead text-white text-white-opacity">Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Excepturi, fugit?</p>
+                    <p class="mb-0"><a href="booking.html"
+                            class="btn btn-outline-white text-white btn-md font-weight-bold">Get in touch</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-footer">
+        <div class="inner first">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="widget">
+                            <h3 class="heading">About Tour</h3>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
+                        </div>
+                        <div class="widget">
+                            <ul class="list-unstyled social">
+                                <li><a href="https://twitter.com/i/flow/login"><span class="icon-twitter"></span></a></li>
+                                <li><a href="https://www.instagram.com/?hl=ko"><span class="icon-instagram"></span></a></li>
+                                <li><a href="https://ko-kr.facebook.com/"><span class="icon-facebook"></span></a></li>
+                                <li><a href="https://www.linkedin.com/login/ko"><span class="icon-linkedin"></span></a></li>
+                                <li><a href="https://dribbble.com/session/new"><span class="icon-dribbble"></span></a></li>
+                                <li><a href="https://www.pinterest.co.kr/login/"><span class="icon-pinterest"></span></a></li>
+                                <li><a href="https://secure5.store.apple.com/kr/shop/signIn?ssi=1AAABgAM0TzkgqiKUFbQw2Or1AyWNuyoVw0D2JkdHGs7CdR_yRzHuxMwAAAA0aHR0cHM6Ly93d3cuYXBwbGUuY29tL2tyL3xodHRwczovL3d3dy5hcHBsZS5jb20va3IvfAACAchRHu9y71qGCWJgJy0aHLgTxXzgiSle1bBzJzt4pIx5"><span class="icon-apple"></span></a></li>
+                                <li><a href="https://accounts.google.com/signin/v2/identifier?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.co.kr%2F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><span class="icon-google"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2 pl-lg-5">
+                        <div class="widget">
+                            <h3 class="heading">Pages</h3>
+                            <ul class="links list-unstyled">
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <div class="widget">
+                            <h3 class="heading">Resources</h3>
+                            <ul class="links list-unstyled">
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="widget">
+                            <h3 class="heading">Contact</h3>
+                            <ul class="list-unstyled quick-info links">
+                                <li class="email"><a href="#">mail@example.com</a></li>
+                                <li class="phone"><a href="#">+1 222 212 3819</a></li>
+                                <li class="address"><a href="#">43 Raymouth Rd. Baltemoer, London 3910</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="overlayer"></div>
+        <div class="loader">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.animateNumber.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.fancybox.min.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/moment.min.js"></script>
+        <script src="js/daterangepicker.js"></script>
+
+        <script src="js/typed.js"></script>
+
+        <script src="js/custom.js"></script>
+
+        <script type="text/javascript">
+            var modal = document.querySelector(".modal1");
+            var trigger = document.querySelector(".trigger");
+            var closeButton = document.querySelector(".close-button");
+            var cancelButton = document.querySelector("#cancel");
+
+            function toggleModal() {
+                modal.classList.toggle("show-modal");
+            }
+
+            function windowOnClick(event) {
+                if (event.target === modal) {
+                    toggleModal();
+                }
+            }
+
+            trigger.addEventListener("click", toggleModal);
+            closeButton.addEventListener("click", toggleModal);
+            cancel.addEventListener("click", toggleModal);
+            window.addEventListener("click", windowOnClick);
+        </script>
+        <script>
+
+            new Swiper('.swiper-container', {
+
+                slidesPerView: 4, // 동시에 보여줄 슬라이드 갯수
+                spaceBetween: 30, // 슬라이드간 간격
+                slidesPerGroup: 4, // 그룹으로 묶을 수, slidesPerView 와 같은 값을 지정하는게 좋음
+
+                // 그룹수가 맞지 않을 경우 빈칸으로 메우기
+                // 3개가 나와야 되는데 1개만 있다면 2개는 빈칸으로 채워서 3개를 만듬
+                loopFillGroupWithBlank: true,
+
+                loop: true, // 무한 반복
+
+                pagination: { // 페이징
+                    el: '.swiper-pagination',
+                    clickable: true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+                },
+                navigation: { // 네비게이션
+                    nextEl: '.swiper-button-next', // 다음 버튼 클래스명
+                    prevEl: '.swiper-button-prev', // 이번 버튼 클래스명
+                },
+            });
+
+
+        </script>
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script>
+            $(document).ready(function (e) {
+                /* a요소를 클릭 했을 시 */
+                $('a').click(function () {
+                    /* iframe 요소의 src 속성값을 a 요소의 data-url 속성값으로 변경 */
+                    $('.iframe').attr('src', $(this).attr('data-url'));
+                })
+            });
+        </script>
+
+</body>
+
+</html>

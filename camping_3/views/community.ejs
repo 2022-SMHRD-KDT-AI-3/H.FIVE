@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<style>
+  .hero.hero-inner {
+    background-image: url(images/Glamping.png);
+    background-size: 100%;
+  }
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="images/favicon.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/daterangepicker.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Tour Free Bootstrap Template for Travel Agency by Untree.co</title>
+</head>
+
+<body>
+
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close">
+        <span class="icofont-close js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <nav class="site-nav">
+    <div class="container">
+      <div class="site-navigation">
+        <a href="main" class="logo m-0">CAMP'US' </a>
+
+        <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
+          <li class="active"><a href="main">Home</a></li>
+          <li><a href="search">Search</a></li>
+          <li><a href="D_main">Diary</a></li>
+          <li class="has-children">
+            <a href="#">HoneyTip</a>
+            <ul class="dropdown">
+              <li><a href="campingtip_a">캠핑음식</a></li>
+              <li><a href="#">캠핑장비</a></li>
+              <li><a href="#">텐트설치</a></li>
+            </ul>
+          </li>
+          <li><a href="community">Community</a></li>
+          <% if(user==null){%>
+            <li><a href="Login_page">Login</a></li>
+            <%}else{%>
+              <li><a href="logout">Logout</a></li>
+              <li><a href="mypage">mypage</a></li>
+              <%} %>
+        </ul>
+
+        <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
+          data-toggle="collapse" data-target="#main-navbar">
+          <span></span>
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="hero hero-inner">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mx-auto text-center">
+          <div class="intro-wrap">
+            <h1 class="mb-0">Free Board</h1>
+            <p class="text-white">True camping is not about going to see a new landscape, but getting another eye to see
+              the world.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="board_wrap">
+    <form action="/http://127.0.0.1:3000/community" method="get">
+      <div class="board_list_wrap">
+        <div class="board_list">
+          <div class="top">
+            <div class="num" name="fb_no">번호</div>
+            <div class="title" name="fb_tatle">제목</div>
+            <div class="writer" name="fb_id">작성자</div>
+            <div class="date" >작성일</div>
+            <div class="count" name="fb_view">조회</div>
+          </div>
+          <div class="list_in">
+            <div class="num" name="fb_no">1</div>
+            <a href="list" class="on" id="tt">
+              <div class="title" name="fb_tatle">팔공산 캠핑가즈아</div>
+            </a>
+            <div class="writer" name="fb_id">깡스터</div>
+            <div class="date">22-03-22</div>
+            <div class="count" name="fb_view">5160</div>
+
+          </div>
+          <div class="list_in">
+            <div class="num" name="fb_no">2</div>
+            <div class="title" name="fb_tatle">강아지랑 캠핑왔다네</div>
+            <div class="writer" name="fb_id">hyeju</div>
+            <div class="date">22-03-30</div>
+            <div class="count" name="fb_view">7250</div>
+
+          </div>
+          <div class="list_in">
+            <div class="num" name="fb_no">3</div>
+            <div class="title" name="fb_tatle">친구들이랑 캠핑</div>
+            <div class="writer" name="fb_id">호지니</div>
+            <div class="date">22-04-05</div>
+            <div class="count" name="fb_view">2022</div>
+
+          </div>
+          <div class="list_in">
+            <div class="num" name="fb_no">4</div>
+            <div class="title" name="fb_tatle">카라반 타고 바다여행</div>
+            <div class="writer" name="fb_id">세유니</div>
+            <div class="date">22-04-11</div>
+            <div class="count" name="fb_view">412</div>
+
+          </div>
+          <div class="list_in">
+            <div class="num" name="fb_no">5</div>
+            <div class="title" name="fb_tatle">삼겹살jmt</div>
+            <div class="writer" name="fb_id">성지니</div>
+            <div class="date">22-04-11</div>
+            <div class="count" name="fb_view">4225</div>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="board_page">
+        <a href="#" class="bt first">
+          << </a>
+            <a href="#" class="bt prev">
+              < </a>
+                <a href="#" class="num on">1</a>
+                <a href="#" class="num">2</a>
+                <a href="#" class="num">3</a>
+                <a href="#" class="num">4</a>
+                <a href="#" class="num">5</a>
+                <a href="#" class="bt next">></a>
+                <a href="#" class="bt last">>></a>
+      </div>
+      <div class="bt_wrap">
+        <a href="C_write" class="on">등록</a>
+      </div>
+  </div>
+  </div>
+
+
+
+  <div class="site-footer">
+    <div class="inner first">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="widget">
+              <h3 class="heading">About Tour</h3>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+                blind texts.</p>
+            </div>
+            <div class="widget">
+              <ul class="list-unstyled social">
+                <li><a href="https://twitter.com/i/flow/login"><span class="icon-twitter"></span></a></li>
+                <li><a href="https://www.instagram.com/?hl=ko"><span class="icon-instagram"></span></a></li>
+                <li><a href="https://ko-kr.facebook.com/"><span class="icon-facebook"></span></a></li>
+                <li><a href="https://www.linkedin.com/login/ko"><span class="icon-linkedin"></span></a></li>
+                <li><a href="https://dribbble.com/session/new"><span class="icon-dribbble"></span></a></li>
+                <li><a href="https://www.pinterest.co.kr/login/"><span class="icon-pinterest"></span></a></li>
+                <li><a
+                    href="https://secure5.store.apple.com/kr/shop/signIn?ssi=1AAABgAM0TzkgqiKUFbQw2Or1AyWNuyoVw0D2JkdHGs7CdR_yRzHuxMwAAAA0aHR0cHM6Ly93d3cuYXBwbGUuY29tL2tyL3xodHRwczovL3d3dy5hcHBsZS5jb20va3IvfAACAchRHu9y71qGCWJgJy0aHLgTxXzgiSle1bBzJzt4pIx5"><span
+                      class="icon-apple"></span></a></li>
+                <li><a
+                    href="https://accounts.google.com/signin/v2/identifier?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.co.kr%2F&ec=GAZAmgQ&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><span
+                      class="icon-google"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-2 pl-lg-5">
+            <div class="widget">
+              <h3 class="heading">Pages</h3>
+              <ul class="links list-unstyled">
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-2">
+            <div class="widget">
+              <h3 class="heading">Resources</h3>
+              <ul class="links list-unstyled">
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="widget">
+              <h3 class="heading">Contact</h3>
+              <ul class="list-unstyled quick-info links">
+                <li class="email"><a href="#">mail@example.com</a></li>
+                <li class="phone"><a href="#">+1 222 212 3819</a></li>
+                <li class="address"><a href="#">43 Raymouth Rd. Baltemoer, London 3910</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
+
+    <script src="js/typed.js"></script>
+
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

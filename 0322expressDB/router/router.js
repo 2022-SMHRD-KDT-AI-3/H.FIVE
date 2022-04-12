@@ -173,6 +173,9 @@ router.post("/selectOne", function(request, response){
     // 사용자가 입력한 ID값을 받아와서
     // 입력한 ID값만 검색하여 출력
     let id =  request.body.id
+    let camp_URL = request.body.camp_URL
+    let camp_info = request.body.camp_info
+    let 
 
     
     
